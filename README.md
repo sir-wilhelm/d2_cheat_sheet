@@ -1,6 +1,6 @@
 # Diablo 2 Cheat Sheet
 
-* [Cheat Sheet](https://htmlpreview.github.io/?https://github.com/Michaelangel007/d2_cheat_sheet/blob/master/index.html)
+* [Cheat Sheet](https://sir-wilhelm.github.io/d2_cheat_sheet/)
 
 # QoL Features
 
@@ -122,5 +122,4 @@ Special thanks to walkawayy for 2.4 Runewords, Wyrda65 for updated alvl 85 info.
 
  * url param to keep state of collapsed tables.  Not needed since table collapse state is persistent. (Fixed in version 1.84)
 
-
-Last Updated: Sun, Feb 26, 2023.
+Last Updated: Tues, July 4, 2023.
