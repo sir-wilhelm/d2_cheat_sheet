@@ -199,6 +199,9 @@
     .sorc { background-color: hsl(240 100% 15%); }
     .sord { background-color: hsl(240 100% 10%); } /* #003 */
 
+     .mono  { filter:grayscale(100%); }
+     .color { filter: none;           }
+
 /* ----- padding ----- */
 
     /* Resist spacer */
@@ -1861,7 +1864,9 @@ var RECIPES = [
 
         gaHolyGrailMapRowToNorm = [],
         gaHolyGrailMapRowToSets = [],
-        gaHolyGrailMapRowToUnqs = [];
+        gaHolyGrailMapRowToUnqs = [],
+
+        gbScrollBarsVisible = true; // saved
 
     var gaRuneOrder =
     [
@@ -2205,6 +2210,14 @@ function dataLoad()
     }
 
     updateHolyGrail();
+
+    var sb = localStorage.getItem( 'scrollbarsVisible' );
+    if ((sb !== undefined) && (sb !== null))
+    {
+        temp = JSON.parse( sb );
+        gbScrollBarsVisible = !!temp;
+        UpdateScrollBarsVisible();
+    }
 }
 
 function dataSave()
@@ -2721,7 +2734,8 @@ function onCollapseAll( button )
 
 function onColor( button )
 {
-    document.getElementById('content').style = '';
+    var content = document.getElementById('content');
+    _removeClasses( content, 'mono' );
 
     if( !button.disabled )
     {
@@ -2736,6 +2750,13 @@ function onLoad()
 
     // iOS touch / hover
     document.addEventListener("touchstart", function() {},false);
+
+    var content = document.getElementById('content');
+    document.body.style.overflow = 'hidden';
+    document.body.style.width = window.outerWidth + 'px';
+          content.style.width = window.outerWidth + 'px';
+          content.style.height = "9999px";
+          content.style.overflow = 'auto';
 
     gaAvailableRunes = new Array( RUNES.length ).fill(1);
     initRuneTable();
@@ -2765,7 +2786,8 @@ function onLoad()
 
 function onMono( button )
 {
-    document.getElementById('content').style = 'filter:grayscale(100%);';
+    var content = document.getElementById('content');
+    _addClasses( content, 'mono' );
 
     if( !button.disabled )
     {
@@ -2780,6 +2802,16 @@ function onResize()
     console.log( 'Dimension: ' + dim );
     var debug = document.getElementById( 'screen-size' );
     debug.innerText = dim;
+
+    document.body.style.width = window.outerWidth + 'px';
+          content.style.width = window.outerWidth + 'px';
+}
+
+function onScrollBars( button )
+{
+    gbScrollBarsVisible = !gbScrollBarsVisible;
+    UpdateScrollBarsVisible();
+    localStorage.setItem( 'scrollbarsVisible', JSON.stringify( gbScrollBarsVisible ) );
 }
 
 function onSortHolyGrailByBaseName() { selectHolyGrailHeader( 'btnHolyGrailBaseName'  ); updateHolyGrailOrder    ( gaHolyGrailSortByBaseName  ) };
@@ -2992,12 +3024,20 @@ function selectRuneWordHeader( selected )
         if( userClasses.length )
             userClasses.forEach( classname =>
                 {
-                    var classes = elem.getAttribute( 'class' ).split( ' ' );
-                    var offset  = classes.indexOf( classname );
-                    if (offset < 0)
+                    var classes = elem.getAttribute( 'class' );
+                    if (classes === null)
                     {
-                        classes.push( classname );
-                        elem.setAttribute( 'class', classes.join( ' ' ) );
+                        elem.setAttribute( 'class', classname );
+                    }
+                    else
+                    {
+                        var list    = classes.split( ' ' );
+                        var offset  = list.indexOf( classname );
+                        if (offset < 0)
+                        {
+                            list.push( classname );
+                            elem.setAttribute( 'class', list.join( ' ' ) );
+                        }
                     }
                 }
             );
@@ -3010,11 +3050,19 @@ function selectRuneWordHeader( selected )
         if( userClasses.length )
             userClasses.forEach( classname =>
                 {
-                    var classes = elem.getAttribute( 'class' ).split( ' ' );
-                    var offset  = classes.indexOf( classname );
-                    if (offset >= 0)
-                        classes.splice( offset, 1 );
-                    elem.setAttribute( 'class', classes.join( ' ' ) );
+                    var classes = elem.getAttribute( 'class' );
+                    if (classes === null)
+                    {
+                        list = [];
+                    }
+                    else
+                    {
+                        var list    = classes.split( ' ' );
+                        var offset  = list.indexOf( classname );
+                        if (offset >= 0)
+                            list.splice( offset, 1 );
+                    }
+                    elem.setAttribute( 'class', list.join( ' ' ) );
                 }
             );
     }
@@ -3449,6 +3497,18 @@ function updateRuneWordsVisible()
         setElementVisible(elementToSetVisible, seen);
     }
 }
+
+// ScrollBars
+function UpdateScrollBarsVisible()
+{
+    if (gbScrollBarsVisible)
+        document.body.style.overflow = 'scroll';
+    else
+        document.body.style.overflow = 'hidden';
+
+    var button = document.getElementById('scroll_bars');
+    setElementVisible( button, gbScrollBarsVisible );
+}
         </script>
     </head>
 <body onload='onLoad();' onresize='onResize();'><div id='content'>
@@ -3459,6 +3519,7 @@ function updateRuneWordsVisible()
 <button type='button' id='mono'                  onclick='onMono(this)       ;'>Mono</button>
 <button type='button' id='color'        disabled onclick='onColor(this)      ;'>Color</button>
 <button type='button' id='collapse_all'          onclick='onCollapseAll(this);'>Collapse</button>
+<button type='button' id='scroll_bars'           onclick='onScrollBars(this) ;'>&#x2195;</button>
             <br>
             <br>
             <table class='head' style='min-width:730px' id='table.fcr'>
@@ -7326,7 +7387,7 @@ Thanks:
   * sir-wilhelm             for tweaking   of runeword ladder labels/minor HTML fix
 </pre>
 <hr class='one'>
-<span style='font-size:12px;'>Version <a href="https://github.com/sir-wilhelm/d2_cheat_sheet/commits">1.93</a>, Last Updated Sat, May 18, 2024.</span>
+<span style='font-size:12px;'>Version <a href="https://github.com/sir-wilhelm/d2_cheat_sheet/commits">1.94</a>, Last Updated Sat, June 2, 2024.</span>
 <span style='font-size:10px;'>CSS Debug: Screen Size:</span> <span id='screen-size'>?</span>, <span class='ios-hidden' >iOS-hidden</span> <span class='ios-visible'>iOS-visible</span>
 </div></body>
 </html>
