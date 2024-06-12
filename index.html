@@ -2751,13 +2751,6 @@ function onLoad()
     // iOS touch / hover
     document.addEventListener("touchstart", function() {},false);
 
-    var content = document.getElementById('content');
-    document.body.style.overflow = 'hidden';
-    document.body.style.width = window.outerWidth + 'px';
-          content.style.width = window.outerWidth + 'px';
-          content.style.height = "9999px";
-          content.style.overflow = 'auto';
-
     gaAvailableRunes = new Array( RUNES.length ).fill(1);
     initRuneTable();
     initRunewordTables();
@@ -2802,9 +2795,6 @@ function onResize()
     console.log( 'Dimension: ' + dim );
     var debug = document.getElementById( 'screen-size' );
     debug.innerText = dim;
-
-    document.body.style.width = window.outerWidth + 'px';
-          content.style.width = window.outerWidth + 'px';
 }
 
 function onScrollBars( button )
@@ -3498,11 +3488,10 @@ function updateRuneWordsVisible()
     }
 }
 
-// ScrollBars
 function UpdateScrollBarsVisible()
 {
     if (gbScrollBarsVisible)
-        document.body.style.overflow = 'scroll';
+        document.body.style.overflow = 'visible';
     else
         document.body.style.overflow = 'hidden';
 
