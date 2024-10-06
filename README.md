@@ -45,6 +45,7 @@
 * XP Tables
    * Power Leveling
    * Level for each difficulty & area
+    * Full XP from Level 1 to 99
 * 4os sword farming
 * 85 alvl (TC 84/87) farming info  (Updated for Patch 2.4)
 * Monochrome/Color buttons
