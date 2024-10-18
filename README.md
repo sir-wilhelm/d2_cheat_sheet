@@ -42,6 +42,7 @@
 * Shopping tables
 * Tomb locations
 * Upped uniques
+* Version Switcher (See Cactus under Misc. Links)
 * XP Tables
    * Power Leveling
    * Level for each difficulty & area
