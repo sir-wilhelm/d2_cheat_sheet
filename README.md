@@ -5,6 +5,8 @@
 # QoL Features
 
 * Readable on desktop and mobile
+ * "Smart" anchors in the URL.  One can omit the `table.` in the URL:
+   * e.g. `#totals` is the same as: `#table.totals`
 * Interactive -- tooltips for runes and runewords (now includes Patch 2.6)
   * Yellow highlight hover row pointer for all tables
 * click on runes to toggle "rune ownership"
