@@ -1,6 +1,7 @@
 # Diablo 2 Cheat Sheet
 
-* [Cheat Sheet](https://sir-wilhelm.github.io/d2_cheat_sheet/)
+* [D2 Cheat Sheet](https://sir-wilhelm.github.io/d2_cheat_sheet/)
+* [D2 Cheat Sheet Mobile](https://sir-wilhelm.github.io/d2_cheat_sheet/mobile.html)
 
 # QoL Features
 
@@ -9,7 +10,7 @@
    * e.g. `#totals` is the same as: `#table.totals`
 * Interactive -- tooltips for runes and runewords (now includes Patch 2.6)
   * Yellow highlight hover row pointer for all tables
-* click on runes to toggle "rune ownership"
+* Click on runes to toggle "rune ownership"
   * Clean visual rune upgrades
   * Hover over rune to see details
   * Rune chest dropping and farming info
@@ -39,6 +40,10 @@
 * Gambling odds and few items (new in v1.33)
 * Holy Grail tracking -- no need to login, continue where you left off time you (re)load the page
   * Can sort by Owned Misc., Owned Sets, Set Names, Owned Uniques, Unique Names, Base Name or TC
+ * Armor "Occupancy" Grid
+   * List base/set/uniques for normal, exceptional, elite items
+   * Don't get scammed from someone trying to pass of an unidentified green set item claiming it is _Tal Rasha's Horadric Crest_ (Death Mask) when it really is _Cathan's Visage_ (Mask)
+   * To be informed is to be forewarned!
 * Essences farming
 * Pandemonium Event (key/organ farming)
 * Shopping tables
@@ -54,7 +59,6 @@
 * Monochrome/Color buttons
 * Lots of handy links to utils, calculators, etc.!
 * Thanks to everyone that caught bugs and offered suggestions.
-
 
 Special thanks to walkawayy for 2.4 Runewords, Wyrda65 for updated alvl 85 info.
 
