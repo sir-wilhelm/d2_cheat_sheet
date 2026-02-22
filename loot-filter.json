@@ -120,7 +120,6 @@
                 "circl"
             ],
             "equipmentItemCode": [
-                "am5",
                 "6bs",
                 "6lb",
                 "uts",
@@ -190,7 +189,6 @@
                 "amc",
                 "8ws",
                 "skr",
-                "ama",
                 "amb",
                 "brs",
                 "6s7",
@@ -235,7 +233,6 @@
                 "6l7",
                 "9pa",
                 "usk",
-                "amf",
                 "7ar",
                 "urs",
                 "72a",
@@ -262,7 +259,7 @@
         },
         {
             "name": "show id scrolls",
-            "enabled": true,
+            "enabled": false,
             "ruleType": "show",
             "filterEtherealSocketed": false,
             "itemCode": [
