@@ -101,7 +101,6 @@
             "ruleType": "show",
             "filterEtherealSocketed": true,
             "equipmentRarity": [
-                "lowQuality",
                 "hiQuality",
                 "normal"
             ],
@@ -262,6 +261,25 @@
             ]
         },
         {
+            "name": "show id scrolls",
+            "enabled": true,
+            "ruleType": "show",
+            "filterEtherealSocketed": false,
+            "itemCode": [
+                "isc",
+                "ibk"
+            ]
+        },
+        {
+            "name": "show antidotes",
+            "enabled": false,
+            "ruleType": "show",
+            "filterEtherealSocketed": false,
+            "itemCode": [
+                "yps"
+            ]
+        },
+        {
             "name": "Hide All Items and Trash",
             "enabled": true,
             "ruleType": "hide",
@@ -288,13 +306,16 @@
             ],
             "itemCode": [
                 "hp2",
+                "isc",
                 "mp3",
                 "mp4",
                 "wms",
+                "ibk",
                 "hp1",
                 "hp4",
                 "mp1",
                 "mp2",
+                "yps",
                 "vps",
                 "hp3"
             ],
