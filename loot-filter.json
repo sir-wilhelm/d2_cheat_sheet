@@ -258,8 +258,26 @@
             ]
         },
         {
+            "name": "Show Super Healing",
+            "enabled": true,
+            "ruleType": "show",
+            "filterEtherealSocketed": false,
+            "itemCode": [
+                "hp5"
+            ]
+        },
+        {
+            "name": "Show Super Mana",
+            "enabled": true,
+            "ruleType": "show",
+            "filterEtherealSocketed": false,
+            "itemCode": [
+                "mp5"
+            ]
+        },
+        {
             "name": "show id scrolls",
-            "enabled": false,
+            "enabled": true,
             "ruleType": "show",
             "filterEtherealSocketed": false,
             "itemCode": [
@@ -308,9 +326,11 @@
                 "mp4",
                 "wms",
                 "ibk",
+                "hp5",
                 "hp1",
                 "hp4",
                 "mp1",
+                "mp5",
                 "mp2",
                 "yps",
                 "vps",
