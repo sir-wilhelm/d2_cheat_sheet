@@ -980,37 +980,37 @@ td
         vertical-align: middle;
     }
 
-    /* Desktop column3 */
+    /* Tooltip below hovered row */
     .tooltip:hover .ttr
     {
         cursor    : pointer;
         visibility: visible;
-        top       : 0px;
-        left      : 1025px;
+        top       : 35px;
+        left      : 300px;
     }
 
     .tooltip:hover .ttg
     {
         cursor    : pointer;
         visibility: visible;
-        top       : 0px;
-        left      : 1025px;
+        top       : 35px;
+        left      : 300px;
     }
 
     .tooltip:hover .ttb
     {
         cursor    : pointer;
         visibility: visible;
-        top       : 0px;
-        left      : 1025px;
+        top       : 35px;
+        left      : 300px;
     }
 
     .tooltip:hover .ttk
     {
         cursor    : pointer;
         visibility: visible;
-        top       : 0px;
-        left      : 1025px;
+        top       : 35px;
+        left      : 300px;
     }
 
 /* ----- Device ----- */
