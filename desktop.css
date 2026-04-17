@@ -22,6 +22,36 @@
         float  : right;
     }
 
+    /* Rune tool tip Container: one line for runeword */
+    .oneline
+    {
+        display       : inline-block;
+        vertical-align: middle;
+    }
+
+    /* Rune tool tip "column" ' + ' -- Vertical Center */
+    .runeadd_vcent
+    {
+        display    : inline-block;
+        align-items: center;
+        position   : relative;
+        top        : 50%;
+        transform  : translateY(-50%);
+    }
+    /* Rune tool tip "column" ' + ' -- Bottom Aligned */
+    .runeadd
+    {
+        display       : inline-block;
+        vertical-align: 8px;
+    }
+
+    /* Rune tool tip "column" rune stacked above rune name */
+    .runestack
+    {
+        display       : inline-block;
+        vertical-align: 8px;
+    }
+
     .in
     {
         display       : inline-block;
@@ -275,6 +305,12 @@
         font-weight: bold;
     }
 
+    /* Character Level Requirement */
+    span.clev
+    {
+        color: #08F;
+    }
+
     /* Def: Increase Chance of Blocking */
     span.cob
     {
@@ -367,10 +403,14 @@
         font-weight: bold;
     }
 
-    /* Level Requirement */
+/*
+background-color: #F0F;
+text-color: #0F0;
+*/
+    /* Generic Number */
     span.n
     {
-        color: #08F;
+        color: #AAA;
     }
 
     span.note
@@ -473,19 +513,11 @@
         color: orange;
     }
 
-    /* Make it easier to see which runes belong to normal, nightmare, hell Countess */
-    span.rune_norm
-    {
-        color: #08F;
-    }
-    span.rune_nm
-    {
-        color: #44F;
-    }
-    span.rune_hell
-    {
-        color: #4EF;
-    }
+    /* Countess rune drops; Make it easier to see which runes belong to normal, nightmare, hell Countess drops */
+    span.rune_norm { color: #08F; }
+    span.rune_nm   { color: #44F; }
+    span.rune_hell { color: #4EF; }
+    span.rune_tz   { color: #08F; }
 
     /* +# to skills */
     span.skill
@@ -957,9 +989,15 @@ td
 
     .tooltip:hover .toolname
     {
+        border             : 1px solid #FFF;
+        border-top-width   : 0px;
+        border-bottom-width: 1px;
+        border-right-width : 0px;
+        border-left-width  : 0px;
         color      : #D4C490; /* runeword */
         font-size  : large;
         font-weight: bold;
+        transform  : translateY(-100%); /* Cancel extra line in 'rw1' due to physical line break which was added for easy updating of runeword name and mets */
     }
 
     /* Tooltip runes in runeword 1.10 */
