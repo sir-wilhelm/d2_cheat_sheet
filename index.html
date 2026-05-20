@@ -229,11 +229,11 @@ var RECIPES = [
     "  Hearth              3  Helms                           Shael + Io    + Thul                    35  2.6  lad*",
     "  Temper              3  Helms                           Shael + Io    + Ral                     35  2.6  lad*",
     "  Hustle              3  Body Armor/Weapons              Shael + Ko    + Eld                     39  2.6  lad*",
-    "* Mosaic              3  Claw                            Mal   + Gul   + Amn                     53  2.6  lad*",
-    "  Metamorphosis       3  Helm                            Io    + Cham  + Fal                     67  2.6  lad*",
+    "* Mosaic              3  Claws                           Mal   + Gul   + Amn                     53  2.6  lad*",
+    "  Metamorphosis       3  Helms                           Io    + Cham  + Fal                     67  2.6  lad*",
 
     "  Authority           3  Body Armor                      Hel   + Shael + Ral                     29  3.0 ", // 'rw93'
-    "  Coven               3  Helm                            Ist   + Ral   + Io                      51  3.0 ", // 'rw94'
+    "  Coven               3  Helms                           Ist   + Ral   + Io                      51  3.0 ", // 'rw94'
     "  Hysteria            3  Body Armor                      Shael + Ko    + Eld                     39  3.0  lad*", // 'rw95'
     "  Mania               3  Weapons                         Shael + Ko    + Eld                     39  3.0  lad*", // 'rw96'
     "  Ritual              3  Daggers                         Amn   + Shael + Ohm                     57  3.0 ", // 'rw97'
@@ -4670,11 +4670,14 @@ Look for +2 <span class='skill'>Enchant</span>, +2 <span class='skill'>Fire Mast
  12% Damage Taken Goes To Mana
  +1 To Light Radius
 
+* + to Life Based on Character Level:
+1, 1.125, 1.25, 1.375, or 1.5
+
  <b>4os Bases for Player (non-eth)</b>
  Base           / Defence / Ethereal / Fortitude, Weight, Str
- * Archon Plate / 410-524 / 615-786  / 1845-2358, Light, 103
- * Dusk Shroud  / 361-467 / 542-701  / 1626-2103, Light, 77
- 
+ Archon Plate   / 410-524 / 615-786  / 1845-2358, Light, 103
+ Dusk Shroud    / 361-467 / 542-701  / 1626-2103, Light,  77
+
  <b>4 os Bases for Merc (eth preferred)</b>
  Base            Defence / Ethereal / Fortitude, Weight, Str
  Diamond Mail    383-489 / 575-734  / 1725-2202, Medium, 131
@@ -5172,7 +5175,7 @@ Level 1 Fanaticism Aura
 <span class='rune'>Hysteria</span> (Armor)
 <span class='rune'>Mania</span> (Weapon)
 </span></td></tr>
-<tr id='rw91'><td class='tooltip'><span class="rw-text p11">* Mosaic              3  Claw                            Mal   + Gul   + Amn                     53  <button type='button' id='fav91' onclick='onToggleFavRW(this);'>&#x2610;</button> 2.6  lad*</span><span class='tool ttk'>
+<tr id='rw91'><td class='tooltip'><span class="rw-text p11">* Mosaic              3  Claws                           Mal   + Gul   + Amn                     53  <button type='button' id='fav91' onclick='onToggleFavRW(this);'>&#x2610;</button> 2.6  lad*</span><span class='tool ttk'>
 <div class='toolname'>Mosaic</div><div class='oneline'><div class='runestack'><img src='runes/mal.png'/><br><span class='rune'>Mal</span></div><div class='runeadd'><br> +&nbsp;<br></div><div class='runestack'><img src='runes/gul.png'/><br><span class='rune'>Gul</span></div><div class='runeadd'><br> +&nbsp;<br></div><div class='runestack'><img src='runes/amn.png'/><br><span class='rune'>Amn</span></div></div>
  +50% +25% chance for finishing moves to not consume charges
  When a finisher is executed this way,
@@ -5191,7 +5194,7 @@ it now refreshes the expiration timer of the stack
 <b>Ladder:</b> 2.6 - 2.8
 <b>Non-Ladder:</b> 3.0+
 </span></td></tr>
-<tr id='rw92'><td class='tooltip'><span class="rw-text p22">  Metamorphosis       3  Helm                            Io    + Cham  + Fal                     67  <button type='button' id='fav92' onclick='onToggleFavRW(this);'>&#x2610;</button> 2.6  lad*</span><span class='tool ttk'>
+<tr id='rw92'><td class='tooltip'><span class="rw-text p22">  Metamorphosis       3  Helms                           Io    + Cham  + Fal                     67  <button type='button' id='fav92' onclick='onToggleFavRW(this);'>&#x2610;</button> 2.6  lad*</span><span class='tool ttk'>
 <div class='toolname'>Metamorphosis</div><div class='oneline'><div class='runestack'><img src='runes/io.png'/><br><span class='rune'>Io</span></div><div class='runeadd'><br> +&nbsp;<br></div><div class='runestack'><img src='runes/cham.png'/><br><span class='rune'>Cham</span></div><div class='runeadd'><br> +&nbsp;<br></div><div class='runestack'><img src='runes/fal.png'/><br><span class='rune'>Fal</span></div></div>
  Werewolf strikes grant Mark for 180 seconds
  <b>Mark of the Wolf</b>:
@@ -5222,7 +5225,7 @@ Requirements -15%
 +<span class='fhr'>20</span>% Faster Hit Recovery
 Fire Resist +<span class='resf'>30</span>%
 </span></td></tr>
-<tr id='rw94'><td class='tooltip'><span class="rw-text m22">  Coven               3  Helm                            Ist   + Ral   + Io                      51  <button type='button' id='fav94' onclick='onToggleFavRW(this);'>&#x2610;</button> 3.0 </span><span class='tool ttk'>
+<tr id='rw94'><td class='tooltip'><span class="rw-text m22">  Coven               3  Helms                           Ist   + Ral   + Io                      51  <button type='button' id='fav94' onclick='onToggleFavRW(this);'>&#x2610;</button> 3.0 </span><span class='tool ttk'>
 <div class='toolname'>Coven</div><div class='oneline'><div class='runestack'><img src='runes/ist.png'/><br><span class='rune'>Ist</span></div><div class='runeadd'><br> +&nbsp;<br></div><div class='runestack'><img src='runes/ral.png'/><br><span class='rune'>Ral</span></div><div class='runeadd'><br> +&nbsp;<br></div><div class='runestack'><img src='runes/io.png'/><br><span class='rune'>Io</span></div></div>
 5% Chance to cast level 10 Sigil Lethargy when struck
 +1 to All Skills
