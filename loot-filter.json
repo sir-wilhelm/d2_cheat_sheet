@@ -8,8 +8,8 @@
             "filterEtherealSocketed": false,
             "equipmentRarity": [
                 "rare",
-                "unique",
-                "set"
+                "set",
+                "unique"
             ],
             "equipmentQuality": [
                 "normal",
@@ -18,8 +18,8 @@
             ],
             "equipmentCategory": [
                 "acce",
-                "armo",
-                "weap"
+                "weap",
+                "armo"
             ]
         },
         {
@@ -52,12 +52,12 @@
                 "uow",
                 "9xf",
                 "uth",
-                "urn",
                 "9tw",
+                "urn",
                 "btl",
                 "7wb",
-                "xul",
                 "uhm",
+                "xul",
                 "9wb",
                 "9lw",
                 "usk",
@@ -76,20 +76,20 @@
                 "9ar",
                 "7qr",
                 "uar",
-                "9qr",
                 "ucl",
+                "9qr",
                 "xth",
                 "uhn",
                 "7lw",
                 "uit",
-                "uh9",
                 "ung",
+                "uh9",
                 "uul",
                 "9ws",
                 "7tw",
                 "7cs",
-                "7ws",
                 "9cs",
+                "7ws",
                 "clw",
                 "utu",
                 "uea"
@@ -111,12 +111,12 @@
             ],
             "equipmentCategory": [
                 "acce",
-                "palad",
                 "wands",
-                "warlo",
-                "druid",
-                "barbh",
+                "palad",
                 "necro",
+                "barbh",
+                "druid",
+                "warlo",
                 "circl"
             ],
             "equipmentItemCode": [
@@ -129,8 +129,8 @@
                 "6lw",
                 "7mp",
                 "6sw",
-                "bst",
                 "msk",
+                "bst",
                 "kri",
                 "9vo",
                 "7cm",
@@ -153,36 +153,37 @@
                 "ush",
                 "7bt",
                 "7gi",
-                "7bl",
                 "72h",
+                "7bl",
                 "9xf",
-                "xtp",
+                "7wd",
                 "7wa",
+                "xtp",
                 "9b7",
                 "7ls",
                 "9wb",
                 "9lw",
                 "7gd",
-                "wst",
                 "7p7",
+                "wst",
                 "uld",
                 "cst",
                 "ucl",
                 "9s8",
                 "9wc",
                 "bhm",
-                "uh9",
                 "ung",
+                "uh9",
                 "9ws",
-                "7vo",
                 "7gm",
+                "7vo",
                 "scy",
                 "wsp",
                 "7fl",
                 "xh9",
                 "7pa",
-                "xrn",
                 "btl",
+                "xrn",
                 "6cb",
                 "7wb",
                 "bld",
@@ -250,8 +251,8 @@
                 "crn",
                 "uhn",
                 "7fb",
-                "9kr",
                 "uul",
+                "9kr",
                 "7cr",
                 "crs",
                 "7h7"
@@ -259,7 +260,7 @@
         },
         {
             "name": "Show Super Healing",
-            "enabled": true,
+            "enabled": false,
             "ruleType": "show",
             "filterEtherealSocketed": false,
             "itemCode": [
@@ -268,7 +269,7 @@
         },
         {
             "name": "Show Super Mana",
-            "enabled": true,
+            "enabled": false,
             "ruleType": "show",
             "filterEtherealSocketed": false,
             "itemCode": [
@@ -277,7 +278,7 @@
         },
         {
             "name": "show id scrolls",
-            "enabled": true,
+            "enabled": false,
             "ruleType": "show",
             "filterEtherealSocketed": false,
             "itemCode": [
@@ -312,8 +313,8 @@
             ],
             "equipmentCategory": [
                 "acce",
-                "armo",
-                "weap"
+                "weap",
+                "armo"
             ],
             "itemCategory": [
                 "ammo",
